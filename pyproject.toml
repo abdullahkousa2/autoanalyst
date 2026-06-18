@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autoanalyst"
+version = "0.1.0"
+description = "An agentic data analyst that writes and runs its own pandas/matplotlib code to answer questions about your data."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Abdullah Kousa" }]
+keywords = ["data-analysis", "agent", "llm", "pandas", "groq", "tool-use",
+            "code-interpreter", "data-science"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+  "groq>=0.11",
+  "pandas>=2.0",
+  "numpy>=1.24",
+  "matplotlib>=3.7",
+  "openpyxl>=3.1",
+  "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+serve = [
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.27",
+  "python-multipart>=0.0.9",
+]
+dev = ["pytest>=7"]
+
+[project.scripts]
+autoanalyst = "autoanalyst.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/abdullahkousa2/autoanalyst"
+Repository = "https://github.com/abdullahkousa2/autoanalyst"
+Demo = "https://huggingface.co/spaces/Abdullahkousa2/autoanalyst"
+
+[tool.setuptools]
+packages = ["autoanalyst"]
