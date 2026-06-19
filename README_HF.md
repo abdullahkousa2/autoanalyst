@@ -28,8 +28,8 @@ result, and self-corrects when its code errors.
    charts — followed by a plain-English answer.
 
 > Powered by **Groq · llama-3.3-70b** tool-calling + a sandboxed pandas/matplotlib
-> executor. Uploads are disabled on this public Space (curated datasets only); run it
-> [locally](https://github.com/abdullahkousa2/autoanalyst) to analyze your own files.
+> executor. Pick a bundled dataset or **upload your own CSV/Excel** and analyze it on
+> the spot.
 
 ## Links
 

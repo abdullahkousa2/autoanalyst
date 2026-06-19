@@ -80,7 +80,7 @@ uvicorn app.server:app --port 8000
 # open http://localhost:8000
 ```
 
-Locally you can **upload your own CSV/Excel**; the public Space ships curated samples only.
+You can **upload your own CSV/Excel** — both locally and on the hosted demo — or use the bundled samples.
 
 ## How it works
 
@@ -103,9 +103,9 @@ Four bundled, recognizable datasets (built by `scripts/make_samples.py`):
 
 LLM-written code is executed, so the sandbox applies a **pragmatic** guard: an AST
 denylist (no `os`/`subprocess`/`socket`/file or network access), a per-snippet timeout,
-and capped output. It is *not* a bulletproof jail — what actually contains the risk is
-that the **public demo runs only curated datasets** inside a **non-root container**, and
-file upload is disabled there. Run untrusted analyses locally at your own discretion.
+and capped output. Uploads are size-capped and type-checked, and the hosted demo runs
+inside a **non-root container**. It is *not* a bulletproof jail, though — treat it as a
+demo, not a place to run sensitive data.
 
 ## Limitations
 

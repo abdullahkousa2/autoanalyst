@@ -3,8 +3,9 @@ FROM python:3.11-slim
 
 ENV PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1 \
-    AUTOANALYST_ALLOW_UPLOAD=0 \
+    AUTOANALYST_ALLOW_UPLOAD=1 \
     AUTOANALYST_SAMPLES_DIR=/app/samples \
+    AUTOANALYST_UPLOAD_DIR=/tmp/autoanalyst_uploads \
     AUTOANALYST_MODEL=llama-3.3-70b-versatile
 
 WORKDIR /app
